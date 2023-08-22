@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&family=Fira+Sans&family=Geologica&family=Montserrat:wght@500&family=Narnoor&family=Rubik&display=swap');
+body{
+    text-align: center;
+    font-family: 'Geologica', sans-serif;
+    background-color: black;
+    color: white;
+}
+h1{
+    font-size: 50px;
+}
+#timer{
+    margin: 10px;
+    border: 1px solid green;
+    font-size: 60px;
+}
+#cardcon{
+    margin: 10px;
+    border: 1px solid goldenrod;
+    height: 200px;
+}
+#card{
+    font-size: 40px;
+    width: 25%;
+    height: 70%;
+    background-color: rgba(137, 43, 226, 0.45);
+    margin: 0 auto;
+}
+#equ{
+    margin-left: 30%;
+    float: left;
+}
