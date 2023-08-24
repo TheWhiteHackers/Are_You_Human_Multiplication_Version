@@ -7,9 +7,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div id="shadow"></div>
+
+
     <h1>MATH CRUNCH</h1>
     <h3 style="margin-top: -20px;">do as many math problems before the time runs out</h3>
+    <h3 style="margin-top: -20px;">it gets harder as you go...<span id="smallq" onclick="explain()">?</span></h3>
+    
     <br>
 
     <div id="timer">1:00</div>
@@ -17,14 +21,21 @@
     <br>
 
     <div id="cardcon">
-
         <div id="card">
             <span id="equ">8 x 8 = </span>
             <input type="text" id="yourans" onkeypress="checkans()">
         </div>
-    
     </div>
 
+    <div id="explainpopup">
+        <h1>Harder How??</h1>
+        <h2 style="margin-top: -10px;">Here is how it works:</h2>
+        <h3>if you get 3 answers correct in a row</h3>
+        <h3>it makes it a little harder</h3>
+        <h3>and if you make a mistake it becomes easier</h3>
+        <button id="okay" onclick="closebtn()">okay</button>
+    </div>
 
+    <script src="js.js"></script>
 </body>
 </html>
