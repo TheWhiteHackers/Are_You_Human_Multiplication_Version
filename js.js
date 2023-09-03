@@ -13,3 +13,7 @@ function explain() {
     document.getElementById("shadow").style.display="block";
     document.getElementById("explainpopup").style.display="block";
 }
+function begin(){
+    document.getElementById("startbox").style.display="none";
+    
+}    
