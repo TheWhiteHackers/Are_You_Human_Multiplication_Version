@@ -2,6 +2,9 @@ let correct = 0;
 let incorrect = 0;
 let qanswered = 0;
 let diff = 4;
+let num1 = Math.floor(Math.random() * diff );
+let num2 = Math.floor(Math.random() * diff );
+let theans = num1*num2;
 
 window.onload=start();
 
@@ -20,13 +23,26 @@ function explain() {
 function begin(){
     document.getElementById("startbox").style.display="none";
     
-    let num1 = Math.floor(Math.random() * diff );
-    let num2 = Math.floor(Math.random() * diff );
     let text = num1 + " X " + num2 + " =";
-    let theans = num1*num2;
-
 
     console.log(num1, num2, theans);
     
     document.getElementById("equ").innerHTML=text;
-}    
+}
+function checkans(e){
+    if(e.keyCode === 13){
+        e.preventDefault();
+        console.log("enter pressed");
+        let yourans = document.getElementById("yourans").value*1;
+
+        if(yourans === theans){
+            alert("yay its correct");
+        } else{
+            alert("nooo its not correct");
+        }
+    
+    
+    
+    
+    }
+}
