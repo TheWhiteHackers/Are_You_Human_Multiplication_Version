@@ -2,9 +2,8 @@ let correct = 0;
 let incorrect = 0;
 let qanswered = 0;
 let diff = 4;
-let num1 = Math.floor(Math.random() * diff );
-let num2 = Math.floor(Math.random() * diff );
-let theans = num1*num2;
+let num1 = 0;
+let num2 = 0;
 
 window.onload=start();
 
@@ -22,27 +21,34 @@ function explain() {
 }
 function begin(){
     document.getElementById("startbox").style.display="none";
-    
-    let text = num1 + " X " + num2 + " =";
-
-    console.log(num1, num2, theans);
-    
-    document.getElementById("equ").innerHTML=text;
+    createequ();
+    // STARTS TIMER!!!!!
 }
 function checkans(e){
     if(e.keyCode === 13){
         e.preventDefault();
         console.log("enter pressed");
         let yourans = document.getElementById("yourans").value*1;
+        let theans = num1*num2;
 
         if(yourans === theans){
-            alert("yay its correct");
+            qanswered+=1;
+            correct+=1;
         } else{
-            alert("nooo its not correct");
+            qanswered+=1;
+            incorrect+=1;
         }
-    
-    
-    
-    
+        document.getElementById("totalq").innerHTML=qanswered+" questions answered";
+        document.getElementById("totalc").innerHTML=correct+" correct";
+        document.getElementById("totali").innerHTML=incorrect+" incorrect";
+        createequ();
     }
+}
+function createequ(){
+    num1 = Math.floor(Math.random() * diff );
+    num2 = Math.floor(Math.random() * diff );
+    let text = num1 + " X " + num2 + " =";    
+    document.getElementById("equ").innerHTML=text;
+    document.getElementById("yourans").value="";
+    console.log(num1, num2);
 }
