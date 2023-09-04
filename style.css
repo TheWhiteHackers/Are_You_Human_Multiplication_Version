@@ -56,6 +56,24 @@ h1{
 #totali{
     color: #db3a34;
 }
+/* -------------- */
+/* BUTTONS */
+/* -------------- */
+#okay{
+    border: none;
+    font-family: 'Orbitron', sans-serif;
+}
+#beginbtn{
+    border: none;
+    border-radius: 0px;
+    font-family: 'Orbitron', sans-serif;
+    color: #f2f4f3;
+    background-color: #181c25;
+    letter-spacing: 3px;
+    padding: 10px 15px 10px 15px;
+    box-shadow: rgb(154, 154, 155) 0px 15px 30px -12px inset, rgb(88, 87, 87) 0px 9px 18px -18px inset;
+}
+
 /* ------------------- */
 /* Popups */
 /* ------------------- */
