@@ -23,6 +23,7 @@ function begin(){
     document.getElementById("startbox").style.display="none";
     createequ();
     // STARTS TIMER!!!!!
+    countdown();
 }
 function checkans(e){
     if(e.keyCode === 13){
@@ -52,3 +53,23 @@ function createequ(){
     document.getElementById("yourans").value="";
     console.log(num1, num2);
 }
+
+function countdown() {
+    var seconds = 10;
+    function tick() {
+      var counter = document.getElementById("counter");
+      seconds--;
+      counter.innerHTML =
+        "00 : " + (seconds < 10 ? "0" : "") + String(seconds);
+      if (seconds > 0) {
+        setTimeout(tick, 1000);
+      } else {
+        gameisover()
+      }
+    }
+    tick();
+  }
+
+function gameisover(){
+    alert("hi")    
+};
