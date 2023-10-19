@@ -10,6 +10,10 @@ window.onload=start();
 function start(){
     document.getElementById("shadow").style.display="none";
     document.getElementById("explainpopup").style.display="none";
+    document.getElementById("cardcon").style.display="none";
+    document.getElementById("ansedq").style.display="none";
+    document.getElementById("end").style.display="none";
+
 }
 function closebtn(){
     document.getElementById("shadow").style.display="none";
@@ -21,6 +25,9 @@ function explain() {
 }
 function begin(){
     document.getElementById("startbox").style.display="none";
+    document.getElementById("cardcon").style.display="block";
+    document.getElementById("ansedq").style.display="block";
+
     createequ();
     // STARTS TIMER!!!!!
     countdown();
@@ -71,5 +78,24 @@ function countdown() {
   }
 
 function gameisover(){
-    alert("hi")    
+    document.getElementById("end").style.display="block";
+    text = "";
+    document.getElementById("cardcon").style.display="none";
+    document.getElementById("ansedq").style.display="none";
+    document.getElementById("timer").style.display="none";
+
+    document.getElementById("tq").innerHTML=qanswered;
+    document.getElementById("tc").innerHTML=correct;
+    document.getElementById("ti").innerHTML=incorrect;
+
+
+   if (qanswered > 3 && correct > 3){
+        text="hmf. I guess I can consider you a human...for now. But you don't worry I'm just getting started, see you again";
+   } else if (qanswered > 3 && correct < 3){
+        text="Did you spam or are you just bad well it doesn't matter since your not even a human...";
+   } else {
+        text="Tsk tsk tsk. At least spam if you don't know anything >:)";
+   }
+
+   document.getElementById("endsentance").innerHTML=text;
 };
