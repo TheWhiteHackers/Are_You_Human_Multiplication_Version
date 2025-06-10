@@ -3,3 +3,9 @@
 
 Have you ever wondered what would happen if
 robots took over the world and made an entire website dedicated to testing if you were human or not by asking you mulitipication questions welp you don't have to wonder anymore because here it is
+
+![start screen](cover1.png)
+
+![game](cover2.png)
+
+![end screen](cover3.png)
